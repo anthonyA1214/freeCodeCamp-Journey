@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container my-5">
+            <h1 id="title">💖 "Getting to Know Me" Survey Form</h1>
+            <p id="description">Let’s get to know each other better! Tell me what makes you <strong>*you*</strong> 🌸</p>
+
+            <form action="/" method="post" id="survey-form">
+                <!-- Name & Basic Info-->
+                <fieldset>
+                    <legend>🧍 Name & Basic Info</legend>
+
+                    <!-- Email -->
+                    <label for="email" id="email-label">
+                        Email:
+                        <input type="email" name="email" id="email" placeholder="e.g., you@example.com" required>
+                    </label>
+
+                    <!-- Name -->
+                    <label for="name" id="name-label">
+                        Name:
+                        <input type="text" name="name" id="name" placeholder="e.g., Jane Doe" required>
+                    </label>
+
+                    <!-- Age -->
+                    <label for="number" id="number-label">
+                        Age:
+                        <input type="number" name="age" id="number" placeholder="e.g., 21" min="13" max="120">
+                    </label>
+
+                    <!-- Gender -->
+                    <p>Gender:</p>
+                    
+                    <label for="male" class="inline">
+                        <input type="radio" name="gender" id="male" value="male">
+                        Male
+                    </label>
+
+                    <label for="female" class="inline">
+                        <input type="radio" name="gender" id="female" value="female">
+                        Female
+                    </label>
+
+                    <label for="other" class="inline">
+                        <input type="radio" name="gender" id="other" value="other" checked>
+                        Prefer not to say
+                    </label>             
+                    
+                </fieldset>
+
+                <!-- Personal Preferences -->
+                <fieldset>
+                    <legend>💘 Personal Preferences</legend>
+
+                    <!-- Ideal Partner Traits-->
+                    <label for="idealPartnerTraits">
+                        What do you look for in a person?
+                        <textarea name="idealPartnerTraits" id="idealPartnerTraits" placeholder="e.g., someone honest, kind, and supportive" rows="5"></textarea>
+                    </label>
+
+                    <!-- Love Language -->
+                    <label for="dropdown">
+                        What's your love language?
+                        <select name="loveLanguage" id="dropdown">
+                            <option value="" disabled selected>Select your love language</option>
+                            <option value="words">Words of Affirmation</option>
+                            <option value="quality">Quality Time</option>
+                            <option value="acts">Acts of Service</option>
+                            <option value="gifts">Gifts</option>
+                            <option value="touch">Physical Touch</option>
+                        </select>
+                    </label>
+                   
+                </fieldset>
+
+                <!-- Relationship Vibes -->
+                <fieldset>
+                    <legend>🌈 Relationship Vibes</legend>
+
+                    <!-- Affection Methods -->
+                    <p>How do you express affection?</p>
+
+                    <label for="hugs">
+                        <input type="checkbox" name="affectionMethods" id="hugs" value="hugs">
+                        Hugs
+                    </label>
+
+                    <label for="compliments">
+                        <input type="checkbox" name="affectionMethods" id="compliments" value="compliments">
+                        Compliments
+                    </label>
+
+                    <label for="memes">
+                        <input type="checkbox" name="affectionMethods" id="memes" value="memes">
+                        Memes
+                    </label>
+
+                    <label for="time">
+                        <input type="checkbox" name="affectionMethods" id="time" value="time">
+                        Time
+                    </label>
+
+                    <label for="messages">
+                        <input type="checkbox" name="affectionMethods" id="messages" value="messages">
+                        Messages
+                    </label>
+
+                    <label for="gifts">
+                        <input type="checkbox" name="affectionMethods" id="gifts" value="gifts">
+                        Gifts
+                    </label>
+
+                    <!-- Ideal First Date-->
+                    <label for="idealFirstDate">
+                        What do you look for in a person?
+                        <textarea name="idealFirstDate" id="idealFirstDate" placeholder="e.g., a simple walk in the park, good food, and meaningful conversation" rows="5"></textarea>
+                    </label>
+
+                </fieldset>
+
+                <!-- Fun & Favorites -->
+                <fieldset>
+                    <legend>🎵 Fun & Favorites</legend>
+
+                    <!-- Pick your vibe: -->
+                    <p>Pick your vibe:</p>
+                    
+                    <label for="chill" class="inline">
+                        <input type="radio" name="vibe" id="chill" value="chill">
+                        Chill & Quiet
+                    </label>
+
+                    <label for="adventurous" class="inline">
+                        <input type="radio" name="vibe" id="adventurous" value="adventurous">
+                        Adventurous & Spontaneous
+                    </label>
+
+                    <label for="romantic" class="inline">
+                        <input type="radio" name="vibe" id="romantic" value="romantic">
+                        Romantic & Deep Talks
+                    </label>     
+
+                    <label for="goofy" class="inline">
+                        <input type="radio" name="vibe" id="goofy" value="goofy">
+                        Goofy & Playful
+                    </label>   
+                    
+                    <!-- Favorite Romantic Media -->
+                    <label for="favoriteRomanticMedia">
+                        Favorite romantic movie or series?
+                        <textarea name="favoriteRomanticMedia" id="favoriteRomanticMedia" placeholder="e.g., Your Name, Friends, Crash Landing on You" rows="5"></textarea>
+                    </label>
+                </fieldset>
+
+                <!-- Final Question -->
+                <fieldset>
+                    <legend>🌟 Final Question</legend>
+
+                    <!-- Hanging Out Activity -->
+                    <label for="hangingOutActivity">
+                        Favorite romantic movie or series?
+                        <textarea name="hangingOutActivity" id="hangingOutActivity" placeholder="e.g., watching a movie, stargazing, sharing snacks and stories" rows="5"></textarea>
+                    </label>
+                </fieldset>
+                
+                <input type="submit" name="submit" id="submit" value="Send My Answers!">
+            </form>    
+
+        </div>
+    </body>
+</html>
