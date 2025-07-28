@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Git and GitHub Basics</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header><h1>Git and Github Basics</h1></header>
+        <a class="nav-link" href="#version_control_concepts">Version Control Concepts</a>
+        <a class="nav-link" href="#installing_git">Installing Git</a>
+        <a class="nav-link" href="#common_git_commands">Common Git Commands</a>
+        <a class="nav-link" href="#branching_and_merging">Branching and Merging</a>
+        <a class="nav-link" href="#intro_to_github">Intro to GitHub</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="version_control_concepts">
+            <header><h2>Version Control Concepts</h2></header>
+            
+            <!-- What is Version Control ?-->
+            <div class="divider">
+                <h3>What is Version Control?</h3>
+                <p>
+                    Version control is a system that records changes to a file or set of files 
+                    over time. It allows developers to track and manage code changes, collaborate 
+                    with others, and revert to previous versions if needed.
+                </p>
+            </div>
+
+            <!-- Why It Matters -->
+            <div class="divider">
+                <h3>Why It Matters</h3>
+                <p>
+                   Without version control, keeping track of code changes becomes difficult, 
+                   especially in teams. Version control systems like Git provide tools to manage 
+                   this efficiently.
+                </p>
+            </div>
+
+            <!-- Local vs Remote Version Control -->
+            <div class="divider">
+                <h3>Local vs Remote Version Control</h3>
+                <ul>
+                    <li><span class="bold">Local</span>: Changes are tracked only on your local machine.</li>
+                    <li><span class="bold">Remote</span>: Code is synchronized with an online server (e.g., GitHub) to enable collaboration.</li>
+                </ul>
+            </div>
+
+            <!-- Analogy -->
+            <div class="divider">
+                <h3>Analogy</h3>
+                <p>
+                    Using version control is like saving multiple versions of a Word document 
+                    with different names (e.g., <span class="highlight">report_v1.docx</span>, 
+                    <span class="highlight">report_v2.docx</span>) — but automated 
+                    and smarter.
+                </p>
+            </div>
+
+            <!-- Advantages of Version Control -->
+            <div class="divider">
+                <h3>Advantages of Version Control</h3>
+                <ul>
+                    <li>✅ Easy roillback to previous versions</li>
+                    <li>✅ Supports team collaboration</li>
+                    <li>✅ Tracks who changed what and when</li>
+                    <li>✅ Branching lets you experiment safely</li>
+                    <li>✅ Reduces risk of code loss</li>
+                </ul>
+            </div>
+
+            <!-- Code -->
+            <div class="divider">
+                <h3>Code</h3>
+                <div class="code">
+                    <p><code>git --version</code></p>
+                    <p><code>git config --list</code></p>
+                </div>
+            </div>
+           
+        </section>
+
+        <section class="main-section" id="installing_git">
+            <header><h2>Installing Git</h2></header>
+
+            <!-- How to Install Git-->
+            <div class="divider">
+                <h3>How to Install Git</h3>
+
+                <ul>
+                    <!-- Windows -->
+                    <li>
+                        <span class="bold">Windows</span>: Download installer from 
+                        <a href="https://git-scm.com/">git-scm.com</a>, run it, and follow
+                        the setup wizard.
+                    </li>
+
+                    <!-- macOS -->
+                    <li>
+                        <span class="bold">macOS</span>: Use Homebrew:
+                        <div class="code">
+                            <p><code>brew install git</code></p>
+                        </div>
+                    </li>
+
+                    <!-- Linux -->
+                    <li>
+                        <span class="bold">Linux (Debian/Ubuntu)</span>:
+                        <div class="code">
+                            <p><code>sudo apt install git</code></p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Configure Git-->
+            <div class="divider">
+                <h3>Configure Git (Required)</h3>
+                <p>Set your name and email (for commit tracking):</p>
+                <div class="code">
+                    <p><code>git config --global user.name "Your Name"</code></p>
+                    <p><code>git config --global user.email "you@example.com"</code></p>
+                </div>
+            </div>
+
+            <!-- Common Installation Issues -->
+            <div class="divider">
+                <h3>Common Installation Issues</h3>
+
+                <ul>
+                    <li>Git command not recognized → Add Git to PATH</li>
+                    <li>Incorrect username/email → Use <span class="highlight">git config --global</span> again to update</li>
+                    <li>Conflicts with pre-installed Git → Uninstall older versions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="common_git_commands">
+            <header><h2>Common Git Commands</h2></header>
+
+            <!-- Basic Git Workflow -->
+            <div class="divider">
+                <h3>Basic Git Workflow</h3>
+                <ol>
+                    <li><span class="bold">Initialize</span> a Git repo</li>
+                    <li><span class="bold">Add</span> changes to staging</li>
+                    <li><span class="bold">Commit</span> them with a message</li>
+                    <li><span class="bold">Push</span> to remote(optional)</li>
+                </ol>
+            </div>
+            
+            <!-- Code -->
+            <div class="divider">
+                <h3>Code</h3>
+                <div class="code">
+                    <p><code>git init</code> <span class="comment"># Initialize a Git repository</span></p>
+                    <p><code>git add .</code> <span class="comment"># Stage all changes</span></p>
+                    <p><code>git commit -m "Initial commit"</code> <span class="comment"># Save changes</span></p>
+                    <p><code>git status</code> <span class="comment"># Check current state</span></p>
+                    <p><code>git log</code> <span class="comment"># Show commit history</span></p>
+                </div>
+            </div>
+
+            <!-- Code Breakdown -->
+            <div class="divider">
+                <h3>Code Breakdown</h3>
+                <ul>
+                    <li><span class="highlight">git init</span>: Starts version control in a folder</li>
+                    <li><span class="highlight">git add</span>: Prepares changes to be commited</li>
+                    <li><span class="highlight">git commit</span>: Saves a snapshot</li>
+                    <li><span class="highlight">git status</span>: Shows staged/unstaged files</li>
+                    <li><span class="highlight">git log</span>: Lists commit history</li>
+                </ul>
+            </div>
+
+            <!-- Common Mistakes to Avoid -->
+            <div class="divider">
+                <h3>Common Mistakes to Avoid</h3>
+                <ul>
+                    <li>❌ Forgetting to stage files before commiting</li>
+                    <li>❌ Comitting large files or secrets</li>
+                    <li>❌ Not writing clear commit messages</li>
+                    <li>❌ Overwriting history without backups</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="branching_and_merging">
+            <header><h2>Branching and Merging</h2></header>
+
+            <!-- What is Branching? -->
+            <div class="divider">
+                <h3>What is Branching?</h3>
+                <p>
+                    Branching allows you to diverge from the main codebase to work 
+                    on new features or fixes without affecting the main code.
+                </p>
+            </div>
+
+            <!-- Why It's Useful -->
+            <div class="divider">
+                <h3>Why It's Useful</h3>
+                <ul>
+                    <li>Safe experimentation</li>
+                    <li>Isolated development</li>
+                    <li>Easier collaboration</li>
+                </ul>
+            </div>
+
+            <!-- Commands -->
+            <div class="divider">
+                <h3>Commands</h3>
+                <div class="code">
+                    <p><code>git branch feature-login</code></p>
+                    <p><code>git checkout feature-login</code></p>
+                    <p><code>git merge feature-login</code></p>
+                </div>
+                <ul>
+                    <li><span class="highlight">git branch</span>: Create a new branch</li>
+                    <li><span class="highlight">git checkout</span>: Switch branches</li>
+                    <li><span class="highlight">git merge</span>: Merge changes into current branch</li>
+                </ul>
+            </div>
+
+            <!-- Avoiding Merge Conflicts -->
+            <div class="divider">
+                <h3>Avoiding Merge Conflicts</h3>
+                <ul>
+                    <li>Pull latest changes before merging</li>
+                    <li>Communicate with team before merging</li>
+                    <li>Don't make large unrelated changes in one branch</li>
+                </ul>
+            </div>
+
+            <!-- Merge Strategies -->
+            <div class="divider">
+                <h3>Merge Strategies</h3>
+                <ul>
+                    <li>Fast-forward merge</li>
+                    <li>Three-way merge</li>
+                    <li>Rebase (advanced)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="intro_to_github">
+            <header><h2>Intro to GitHub</h2></header>
+
+            <!-- What is GitHub? -->
+            <div class="divider">
+                <h3>What is GitHub?</h3>
+                <p>
+                    GitHub is a cloud-based platform where you can host your Git repositories. 
+                    It allows for collaboration, version tracking, and code sharing.
+                </p>
+            </div>
+
+            <!-- Basic Workflow with GitHub -->
+            <div class="divider">
+                <h3>Basic Workflow with GitHub</h3>
+                <ol>
+                    <li>Create a GitHub repo</li>
+                    <li>Link your local repo to remote</li>
+                    <li>Push your changes</li>
+                </ol>
+            </div>
+
+            <!-- Commands -->
+            <div class="divider">
+                <h3>Commands</h3>
+                <div class="code">
+                    <p><code>git remote add origin https://github.com/username/repo.git</code></p>
+                    <p><code>git push -u origin main</code></p>
+                    <p><code>git pull origin main</code></p>
+                </div>
+            </div>
+
+            <!-- GitHub Web Interface -->
+            <div class="divider">
+                <h3>GitHub Web Interface</h3>
+                <p>You can:</p>
+                <ul>
+                    <li>View code</li>
+                    <li>Edit files</li>
+                    <li>Track issues</li>
+                    <li>Submit pull requests</li>
+                </ul>
+            </div>
+
+            <!-- GitHub Collaboration Features -->
+            <div class="divider">
+                <h3>GitHub Collaboration Features</h3>
+                <ul>
+                    <li><span class="bold">🧾 Issues</span>: Report bugs or request features</li>
+                    <li><span class="bold">`📥 Pull Requests</span>: Propose changes and discuss</li>
+                    <li><span class="bold">🕵️‍♂️ Code Reviews</span> Revuew others' code</li>
+                    <li><span class="bold">📊 Insights</span>: See commit history and contributors</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
